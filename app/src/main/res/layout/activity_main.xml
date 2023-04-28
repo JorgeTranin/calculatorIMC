@@ -5,7 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="">
 
+</LinearLayout>
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/et_wight"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -15,14 +20,16 @@
         android:layout_marginTop="35dp"
         android:hint="Weight"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView">
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:startIconContentDescription="icone de balança"
+        app:startIconDrawable="@drawable/ic_balance">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_wight_1"
+            style="@style/TextAppearance.AppCompat.Title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            android:inputType="numberDecimal" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -45,12 +52,14 @@
         android:layout_marginTop="16dp"
         android:hint="height"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_wight">
+        app:layout_constraintTop_toBottomOf="@+id/et_wight"
+        app:startIconContentDescription="icon height"
+        app:startIconDrawable="@drawable/ic_height">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_heigth_1"
+            style="@style/TextAppearance.AppCompat.Title"
             android:layout_width="match_parent"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:layout_height="wrap_content"
             android:inputType="numberDecimal" />
 
@@ -66,13 +75,15 @@
         app:layout_constraintStart_toEndOf="@+id/et_heigth"
         app:layout_constraintTop_toTopOf="@+id/et_heigth" />
 
-    <LinearLayout
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/ll_BMI_Result"
+        style="@style/Widget.Material3.CardView.Elevated"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/result"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="80dp"
-        android:gravity="center"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/result"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_heigth">
@@ -83,6 +94,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
             android:text="IMC"
             android:textSize="25sp" />
 
@@ -91,11 +103,12 @@
             style="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="200dp"
-            tools:text="0"
-            android:textSize="25sp" />
+            android:layout_marginStart="300dp"
+            android:layout_marginTop="8dp"
+            android:textSize="25sp"
+            tools:text="0" />
 
-    </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
 
 
     <TextView
@@ -104,7 +117,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="72dp"
         android:textSize="24sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ll_BMI_Result"

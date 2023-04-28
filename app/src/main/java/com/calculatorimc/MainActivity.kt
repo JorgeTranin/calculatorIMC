@@ -15,7 +15,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
         val spinner: Spinner = findViewById(R.id.sp_weight_unit)
 
         spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
@@ -27,6 +26,8 @@ class MainActivity : AppCompatActivity() {
             ) {
                 val selectedItem = parent.getItemAtPosition(position)  // item selecionado
                 // fazer o que quiser com o item selecionado aqui
+
+
                 binding.btnCalcular.setOnClickListener {
                     if (selectedItem == "lbs") {
                         Toast.makeText(
