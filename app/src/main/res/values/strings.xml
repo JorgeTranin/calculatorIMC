@@ -1,13 +1,19 @@
 <resources>
     <string name="app_name">calculatorIMC</string>
+    <string name="abaixo_do_peso">Abaixo do peso</string>
+    <string name="peso_normal">Peso normal</string>
+    <string name="pr_obesidade">Pré-obesidade</string>
+    <string name="obesidade_grau_1">Obesidade Grau 1</string>
+    <string name="obesidade_grau_2">Obesidade Grau 2</string>
+    <string name="obesidade_grau_3">Obesidade Grau 3</string>
 
     <string-array name="weight_units">
-        <item>lbs</item>
         <item>kg</item>
+        <item>lbs</item>
     </string-array>
 
     <string-array name="height_units">
-        <item>cm</item>
         <item>m</item>
+        <item>cm</item>
     </string-array>
 </resources>
